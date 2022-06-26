@@ -1,0 +1,28 @@
+import matplotlib.pyplot as plt
+import numpy as np
+#plot 1:
+plt.suptitle("CHÁN ĐỜI")
+x = np.array([0, 1, 2, 3])
+y = np.array([3, 8, 1, 10])
+plt.subplot(2, 2, 1) # 2 hàng đồ thị , 2 cột đồ thị , 1 là đồ thị đầu tiên
+plt.plot(x,y,marker = '*') # đồ thị đường , marker là cấu trúc điểm trên đồ thị
+plt.grid() # các đường thẳng phân biệt các ô
+plt.title("Chán")
+
+#plot 2:
+x = np.array([0, 1, 2, 3])
+y = np.array([10, 20, 30, 40])
+plt.subplot(2, 2, 2)
+plt.title("Đời")
+plt.scatter(x,y,color = 'green') # hiển thị các điểm chứ không theo đường thẳng , có thể chỉnh theo màu
+plt.grid()
+y = np.array([35, 25, 25, 15])
+# đồ thị 3
+plt.subplot(2,2,3)
+plt.pie(y) # đồ thị tròn
+x = np.array(["A", "B", "C", "D"])
+y = np.array([3, 8, 1, 10])
+# đồ thị 4
+plt.subplot(2,2,4)
+plt.bar(x,y) # đồ thị dạng cột để so sánh
+plt.show()
